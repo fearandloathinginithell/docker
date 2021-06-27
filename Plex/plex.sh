@@ -29,4 +29,5 @@ docker run \
 -v "/vol2/Media/DVR Movies:/DVR_Movies" \
 -v "/vol2/Media/DVR TV Shows:/DVR_TV_Shows" \
 --device=/dev/dri:/dev/dri \
+--restart=unless-stopped \
 plexinc/pms-docker
