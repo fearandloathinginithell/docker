@@ -8,9 +8,9 @@ docker run \
 --name plex \
 --network=host \
 -e TZ="Pacific/Auckland" \
--e PLEX_CLAIM="<CLAIM>" \
+-e PLEX_CLAIM="claim-<https://www.plex.tv/claim/>" \
 -e PLEX_UID="<GUID>" \
--e PLEX_GID"100" \
+-e PLEX_GID"<GUID>" \
 -e ADVERTISE_IP="http://<IP_ADDRESS>:32400/" \
 -h <HOST_NAME> \
 -v "/vol2/docker/plex/database:/config" \
