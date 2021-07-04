@@ -6,16 +6,13 @@ sleep 15
 
 docker run -d \
     --name pihole \
-    -p 53:53/tcp \
-    -p 53:53/udp \
-    -p 80:80 \
-    -p 443:443 \
     -v "/vol2/docker/pihole/etc-pihole/:/etc/pihole/" \
     -v "/vol2/docker/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
     --dns=<INTERNAL_ROUTER> --dns=1.1.1.1 \
     --restart=unless-stopped \
     --hostname pi.hole \
-    --network trusted-net \
+    --network=trusted-net \
+    --ip=<IP_ADDRESS> \
     -e TZ="Pacific/Auckland" \
     -e VIRTUAL_HOST="pi.hole" \
     -e PROXY_LOCATION="pi.hole" \
