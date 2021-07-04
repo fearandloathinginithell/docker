@@ -1,6 +1,18 @@
 # docker
 Docker Configs from Synology
 
+## Macvlan
+Model: DS916+ (Upgraded 8 GB Ram)
+Tested: DSM 7.0-41882
+
+Script to create macvlan used by some of these docker images
+
+https://github.com/fearandloathinginithell/docker/blob/main/macvlan/macvlan.sh
+
+Scheduled task (On boot) on Synology to allow the NAS to talk to images on the MACVLAN network, this shim is lost on reboot.
+
+https://github.com/fearandloathinginithell/docker/blob/main/macvlan/docker-shim.sh
+
 ## PiHole
 
 Model: DS916+ (Upgraded 8 GB Ram)
@@ -19,6 +31,21 @@ https://github.com/anudeepND/whitelist#for-whitelisttxt
 
 Model: DS916+ (Upgraded 8 GB Ram)
 Tested: DSM 7.0-41882
+
+https://github.com/fearandloathinginithell/docker/blob/main/Plex/whoami.sh
+Retreives the GUIDs to use with plex docker
+```
+-e PLEX_UID="<GUID>" \
+-e PLEX_GID"<GUID>" \
+```
+Which provides access to the following shares
+```
+-v "/vol2/Media/Movies:/Movies" \
+-v "/vol2/Media/TV Shows:/TV_Shows" \
+-v "/vol2/Media/Home Videos:/Home_Videos" \
+-v "/vol2/Media/DVR Movies:/DVR_Movies" \
+-v "/vol2/Media/DVR TV Shows:/DVR_TV_Shows" \
+```
 
 # Docker Host
 ##  DS916+
