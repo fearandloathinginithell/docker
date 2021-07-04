@@ -32,6 +32,7 @@ https://github.com/anudeepND/whitelist#for-whitelisttxt
 Model: DS916+ (Upgraded 8 GB Ram)
 Tested: DSM 7.0-41882
 
+### GUIDs
 https://github.com/fearandloathinginithell/docker/blob/main/Plex/whoami.sh
 Retreives the GUIDs to use with plex docker
 ```
