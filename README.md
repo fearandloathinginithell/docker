@@ -8,8 +8,11 @@ Tested: DSM 7.0-41882
 
 ### Whitelist
 Run using a scheduled task in Synology run as root
+
 https://github.com/fearandloathinginithell/docker/blob/main/pi-hole/whitelist.sh
+
 distilled from:
+
 https://github.com/anudeepND/whitelist#for-whitelisttxt
 
 ## Plex
