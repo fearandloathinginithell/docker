@@ -20,7 +20,7 @@ docker run \
 -e ADVERTISE_IP="http://<IP_ADDRESS>:32400/" \
 -e PLEX_UID="<GUID>" \
 -e PLEX_GID"<GUID>" \
--h Glasir \
+-h <PLEX_HOSTNAME> \
 -v "/vol2/docker/plex/database:/config" \
 -v "/vol2/docker/plex/transcode/temp:/transcode" \
 -v "/vol2/Media/Movies:/Movies" \
