@@ -7,12 +7,10 @@ sleep 15
 docker run -d \
     --name mariaHAdb \
     -v "/volume1/docker/mariadbha/hassio/:/var/lib/mysql" \
-    -p 3306 \
-    --dns=<INTERNAL_ROUTER_IP> \
+    -p 3306:3306 \
     --restart=unless-stopped \
     --hostname mariaHAdb \
-    --network=trusted-net \
-    --ip=<IP_ADDRESS_off_mariadb \
+    --network=bridge \
     -e MARIADB_ROOT_PASSWORD="<PASSWORD>" \
     -e MARIADB_DATABASE="<DBNAME>" \
     -e MARIADB_USER="<USER>" \
